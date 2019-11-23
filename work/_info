@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips
+vFullAdder
+Z1 !s110 1572736719
+!i10b 1
+!s100 HV3kER>DYfgH36H8bZ3Q=2
+IoKeW]EQK@@fVan4@Xnj8>2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1572736635
+Z4 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/FullAdder.v
+Z5 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/FullAdder.v
+L0 1
+Z6 OL;L;10.6d;65
+r1
+!s85 0
+31
+Z7 !s108 1572736719.000000
+!s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/FullAdder.v|
+Z8 !s90 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/FullAdder.v|
+!i113 0
+Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 tCvgOpt 0
+n@full@adder
+vFullAdderTest
+R1
+!i10b 1
+!s100 D68Sf^>Om^Z]9P6AVBjmz0
+IUUcQ@@7fH>2^TB[NO6]l50
+R2
+R0
+R3
+R4
+R5
+L0 10
+R6
+r1
+!s85 0
+31
+R7
+Z11 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/FullAdder.v|
+R8
+!i113 0
+R9
+R10
+n@full@adder@test
