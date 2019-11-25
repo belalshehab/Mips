@@ -12,7 +12,6 @@ module Mips(
 //ExtendedPc 
 wire [31:0] currentAddress;
 // wire [31:0] jumbSteps;
-
 wire addressSrcSelect;
 
 //InstructionMemory
@@ -50,7 +49,7 @@ assign mipsRegWriteData = regWriteData;
 //End of debugging signals
 
 
-ExtendedPC pc(currentAddress, extendedInstruction , addressSrcSelect, reset, clk);
+ExtendedPC pc(currentAddress, extendedInstruction, addressSrcSelect, reset, clk);
 
 and branchAnd(addressSrcSelect, aluZeroFlag, branch);
 
@@ -88,18 +87,18 @@ Mips mips(aluOut, instruction, regData1, regData2, PC, regWriteData, reset, clk)
 
 initial
 begin
-    $monitor($time,,, "aluOut:%d, regData1:%d, regData2:%d, instruction:%b\nregWriteData : %d",
-            aluOut, regData1, regData2, instruction, regWriteData);
+    // $monitor($time,,, "aluOut:%d, regData1:%d, regData2:%d, instruction:%b\nregWriteData : %d",
+    //         aluOut, regData1, regData2, instruction, regWriteData);
     reset = 1'b1;
+
     #10
     reset = 1'b0;
+end
 
-    #200
-    reset = 1'b0;
-
-// 001000_00000_10000_0000000000001010 addi $s0, $0, 10
-// 001000_10000_10001_0000000000001010 addi $s1, $s0, 10
-// 101011_10000_10001_0000000000010100 sw $s2, 20($s2)
+always@(posedge clk)
+begin
+    if(^aluOut[0] === 1'bx && reset == 1'b0)
+        $finish;
 end
 
 endmodule // MipsTest

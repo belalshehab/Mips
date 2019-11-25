@@ -8,6 +8,10 @@ if(aluOp == 2'b00)
 	aluControl <= 3'b010;  	//(Add) addi, lw, sw
 else if (aluOp == 2'b01)
 	aluControl <= 3'b110;	//(Sub) beq, bne	
+
+else if (aluOp == 2'b11) 	//ori
+	aluControl = 3'b001;
+	
 else if (aluOp == 2'b10)	//R-type
 	begin
 		if(funct == 32)

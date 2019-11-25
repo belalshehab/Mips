@@ -1,15 +1,16 @@
 module RegisterFile(
 	output [31:0] data1, data2,
-	input [4:0] read1, read2, writeReg,
+	input [4:0] readAddress1, readAddress2, writeRegAddress,
 	input [31:0] writeData,
 	input writeEnable,
 	input clk
 	);
 
 reg [31:0] rf [0:31];
+integer file;
 
-assign data1 = rf[read1];
-assign data2 = rf[read2];
+assign data1 = rf[readAddress1];
+assign data2 = rf[readAddress2];
 
 initial
 begin
@@ -19,7 +20,13 @@ end
 always@(posedge clk)
 begin
 if(writeEnable)
-	rf[writeReg] <= writeData;
+begin
+	rf[writeRegAddress] <= writeData;
+	file = $fopen("RegData.txt");
+    $fdisplay(file, "\n@%h //%d", writeRegAddress, writeRegAddress);
+    $fdisplay(file, "%b //%d" , writeData, writeData);
+end
+
 end
 endmodule
 
@@ -27,7 +34,7 @@ endmodule
 module RegFileTest;
 
 wire [31:0] data1, data2;
-reg[4:0] read1, read2, writeReg;
+reg[4:0] readAddress1, readAddress2, writeReg;
 reg [31:0] writeData;
 
 reg writeEnable;
@@ -37,63 +44,62 @@ reg [31:0] i;
 
 Clock clock (clk);
 
-RegisterFile registerFile(data1, data2, read1, read2, writeReg, writeData, writeEnable, clk);
+RegisterFile registerFile(data1, data2, readAddress1, readAddress2, writeReg, writeData, writeEnable, clk);
 
 
 
 initial
 begin
-$monitor($time,,, "read1: %d, read2: %d, data1: %d, data2: %d",
-read1, read2, data1, data2);
-read1 = 0;
-read2 = 0;
+$monitor($time,,, "readAddress1: %d, readAddress2: %d, data1: %d, data2: %d",
+readAddress1, readAddress2, data1, data2);
+readAddress1 = 0;
+readAddress2 = 0;
 writeReg = 0;
 writeData = 0;
 // writeEnable = 1;
 
-i = 0;
+i = 1;
 
+writeEnable = 1;
 
-repeat(32)@(posedge clk)
+repeat(31)@(posedge clk)
 begin
-	writeEnable = 1;
+	
 	writeData <= i;
 	writeReg <= i;
 	i <= i +1;
-	writeEnable = 0;
+	
 end
-
-// #5
-// writeEnable = 0;
-
-
-
-#10
-read1 = 2;
-read2 = 3;
-
-#10
-read1 = 1;
-read2 = 2;
-
-#10
-read1 = 0;
-read2 = 1;
-
-#10
-writeData = 5;
-writeReg = 0;
-writeEnable = 1;
-
-#2
-writeData = 6;
-writeReg = 1;
-
-#10
+writeEnable = 0;
+#5
 writeEnable = 0;
 
-read1 = 31;
-read2 = 1;
+#10
+readAddress1 = 2;
+readAddress2 = 3;
+
+#10
+readAddress1 = 1;
+readAddress2 = 2;
+
+// #10
+// readAddress1 = 0;
+// readAddress2 = 1;
+
+// #10
+// writeData = 5;
+// writeReg = 0;
+// writeEnable = 1;
+
+// #2
+// writeData = 6;
+// writeReg = 1;
+
+// #10
+// writeEnable = 0;
+
+// readAddress1 = 31;
+// readAddress2 = 1;
 
 end
 

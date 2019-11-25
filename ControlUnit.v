@@ -36,7 +36,7 @@ begin
 		end
 	end
 
-	// For branch instructions
+	// For branch instructions beq bnq
 	else if(opcode == 4 | opcode == 5) 
 	begin
 		branch   = 1'b1;
@@ -65,6 +65,14 @@ begin
 	begin
 		aluSrc = 1'b1;
 		regWrite = 1'b1;
+	end
+
+	//ori
+	else if(opcode == 13)
+	begin
+		aluSrc = 1'b1;
+		regWrite = 1'b1;
+		aluOp = 2'b11;
 	end
 
 	// J type

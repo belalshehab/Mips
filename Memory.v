@@ -8,8 +8,12 @@ module DataMemory(
 reg [7:0] memorySlotes [0:1023];
 integer file;
 assign dataOut = {memorySlotes[address], memorySlotes[address +1],
-memorySlotes[address +2], memorySlotes[address +3]};
+                    memorySlotes[address +2], memorySlotes[address +3]};
 
+initial
+begin
+    file = $fopen("DataMemory.txt");
+end
 always@(posedge clk)
 begin
 if(writeEnable)
@@ -18,7 +22,6 @@ begin
     memorySlotes[address +1] <= writeData[23:16];
     memorySlotes[address +2] <= writeData[15:8];
     memorySlotes[address +3] <= writeData[7:0];
-    file = $fopen("DataMemory.txt");
     $fdisplay(file, "\n@%h//%d", address, address);
     $fdisplay(file, "%b" , writeData[31:24]);
     $fdisplay(file, "%b", writeData[23:16]);
