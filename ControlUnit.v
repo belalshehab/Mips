@@ -6,6 +6,7 @@ module ControlUnit(
 	aluSrc,
 	regWrite,
 	jump,
+	jumpR,
 	output reg [2:0] aluOp,
 	
 	input [5:0] opcode, funct
@@ -22,6 +23,7 @@ begin
 	aluSrc = 1'b0;
 	regWrite = 1'b0;
 	jump = 1'b0;
+	jumpR = 1'b0;
 	aluOp = 3'b000;
 
 	// R type
@@ -35,6 +37,10 @@ begin
 		if(funct != 8)
 		begin
 			regWrite = 1'b1;
+		end
+		if(funct == 8)
+		begin
+			jumpR = 1'b1;
 		end
 	end
 

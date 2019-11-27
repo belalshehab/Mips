@@ -11,7 +11,7 @@ module Mips(
 
 //ExtendedPc 
 wire [31:0] currentAddress;
-wire addressBranchSelect, addressJumpSelect;
+wire addressBranchSelect, addressJumpSelect, addressJumpRSelect;
 
 //InstructionMemory
 wire [31:0] instruction;
@@ -48,7 +48,7 @@ assign mipsRegWriteData = regWriteData;
 //End of debugging signals
 
 
-ExtendedPC pc(currentAddress, extendedInstruction, addressBranchSelect, addressJumpSelect, instruction, reset, clk);
+ExtendedPC pc(currentAddress, extendedInstruction, addressBranchSelect, addressJumpSelect, addressJumpRSelect, instruction, regData1, reset, clk);
 
 and branchAnd(addressBranchSelect, aluZeroFlag, branch);
 
@@ -60,7 +60,7 @@ RegisterFile registerFile(regData1, regData2, instruction[25:21], instruction[20
                             writeRegAddress, regWriteData, regWriteEnable, clk);
 
 ControlUnit controlUnit(writeRegDist, branch, memToReg, memWriteEnable, aluSrcSelector,
-			regWriteEnable, addressJumpSelect, aluOp, instruction[31:26], instruction[5:0]);
+			regWriteEnable, addressJumpSelect, addressJumpRSelect, aluOp, instruction[31:26], instruction[5:0]);
 
 
 SignExtend signExtend(extendedInstruction, instruction[15:0]);
