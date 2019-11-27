@@ -2,7 +2,8 @@ module Alu(
     output reg [31:0] aluOut,
     output zero,
     input [31:0] in1, in2,
-    input [2:0] aluCtrl
+    input [2:0] aluCtrl,
+    input [4:0] shamt
     );
 
 assign zero = aluOut == 0;
@@ -11,11 +12,12 @@ always@(aluCtrl, in1, in2)
 
 begin
 case (aluCtrl)
-3'b000: aluOut <= in1 & in2;         //And
-3'b001: aluOut <= in1 | in2;         //Or
-3'b010: aluOut <= in1 + in2;         //Add
-3'b110: aluOut <= in1 - in2;         //Sub
-3'b111: aluOut <= in1 < in2 ? 1:0;   //Slt
+3'b000: aluOut <= in1 & in2;            //And
+3'b001: aluOut <= in1 | in2;            //Or
+3'b010: aluOut <= in1 + in2;            //Add
+3'b110: aluOut <= in1 - in2;            //Sub
+3'b111: aluOut <= in1 < in2 ? 1:0;      //Slt
+3'b011: aluOut <= in2 << shamt;         //Sll
 
 // 4'b100010: aluOut <= ~(in1 | in2);
 endcase
@@ -29,13 +31,14 @@ module ExtendedAlu(
     output zero,
     input [31:0] in1, in2,
     input [5:0] funct,
-    input [1:0] aluOp
+    input [2:0] aluOp,
+    input [4:0] shamt
 );
 
 wire [2:0] aluCtrl;
 
 AluControl aluControl(aluCtrl, funct, aluOp);
-Alu alu(aluOut, zero, in1, in2, aluCtrl);
+Alu alu(aluOut, zero, in1, in2, aluCtrl, shamt);
 endmodule // ExtendedAlu
 
 
@@ -53,7 +56,7 @@ wire memToReg;
 wire memWrite;
 wire aluSrc;
 wire regWrite;
-wire [1:0] aluOp;
+wire [2:0] aluOp;
 
 // reg [2:0] aluCtrl;
 // reg [5:0] opcode, funct;

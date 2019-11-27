@@ -26,7 +26,7 @@ wire regWriteEnable;
 
 //ControlUnit 
 wire writeRegDist, branch, memToReg, memWriteEnable, aluSrcSelector, regWrite;
-wire [1:0] aluOp;
+wire [2:0] aluOp;
 
 //ExtendedAlu
 wire [31:0] aluOut;
@@ -66,7 +66,7 @@ ControlUnit controlUnit(writeRegDist, branch, memToReg, memWriteEnable, aluSrcSe
 
 SignExtend signExtend(extendedInstruction, instruction[15:0]);
 MuxTwoToOne32 aluInput2Mux(aluInput2, regData2, extendedInstruction, aluSrcSelector);
-ExtendedAlu extendedAlu(aluOut, aluZeroFlag, regData1, aluInput2, instruction[5:0], aluOp);
+ExtendedAlu extendedAlu(aluOut, aluZeroFlag, regData1, aluInput2, instruction[5:0], aluOp, instruction[10:6]);
 
 
 DataMemory dataMemory(dataMemoryRead, aluOut, regData2, memWriteEnable, clk);

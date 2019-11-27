@@ -1,7 +1,7 @@
 module ShiftLeftRegister(
     output [31:0] out,
     input [31:0] in,
-    input [5:0] shiftAmmount
+    input [4:0] shiftAmmount
 );
 assign out = in << shiftAmmount;
 endmodule // ShiftRegister
@@ -11,7 +11,7 @@ module shiftRegTest;
 
 wire [31:0]out;
 reg [31:0] in;
-reg [5:0] shiftAmmount;
+reg [4:0] shiftAmmount;
 
 ShiftLeftRegister sh(out, in, shiftAmmount);
 

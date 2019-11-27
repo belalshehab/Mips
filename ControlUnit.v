@@ -5,7 +5,7 @@ module ControlUnit(
 	memWrite,
 	aluSrc,
 	regWrite,
-	output reg [1:0] aluOp,
+	output reg [2:0] aluOp,
 	
 	input [5:0] opcode, funct
 );
@@ -20,14 +20,14 @@ begin
 	memWrite = 1'b0;
 	aluSrc = 1'b0;
 	regWrite = 1'b0;
-	aluOp = 2'b00;
+	aluOp = 3'b000;
 
 	// R type
 	if(opcode == 0)
 	begin
 		regDst = 1'b1;
 		// regWrite = 1'b1;
-		aluOp = 2'b10;
+		aluOp = 3'b010;
 
 		// if not jr
 		if(funct != 8)
@@ -40,7 +40,7 @@ begin
 	else if(opcode == 4 | opcode == 5) 
 	begin
 		branch   = 1'b1;
-		aluOp = 2'b01;
+		aluOp = 3'b001;
 	end
 
 	// For memory write operation
@@ -72,7 +72,7 @@ begin
 	begin
 		aluSrc = 1'b1;
 		regWrite = 1'b1;
-		aluOp = 2'b11;
+		aluOp = 3'b011;
 	end
 
 	// J type

@@ -26,7 +26,7 @@ wire [31:0] addressPlus4, jumbOffset, jumbAddress;
 
 FullAdder add4(addressPlus4, currentAddress, 4);
 
-ShiftLeftRegister shiftLeft(jumbOffset, jumbSteps, 2);
+ShiftLeftRegister shiftLeft(jumbOffset, jumbSteps, 5'b00010);
 FullAdder addJumb(jumbAddress, addressPlus4, jumbOffset);
 
 MuxTwoToOne32 mux(nextAddress, addressPlus4, jumbAddress, select);
