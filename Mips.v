@@ -11,8 +11,7 @@ module Mips(
 
 //ExtendedPc 
 wire [31:0] currentAddress;
-// wire [31:0] jumbSteps;
-wire addressSrcSelect;
+wire addressBranchSelect, addressJumpSelect;
 
 //InstructionMemory
 wire [31:0] instruction;
@@ -34,7 +33,7 @@ wire aluZeroFlag;
 wire [31:0] aluInput2;
 
 //SignExtend
-wire [31:0] extendedInstruction; //aka jump steps
+wire [31:0] extendedInstruction; //aka branch steps
 
 //DataMemory
 wire [31:0] dataMemoryRead;
@@ -49,9 +48,9 @@ assign mipsRegWriteData = regWriteData;
 //End of debugging signals
 
 
-ExtendedPC pc(currentAddress, extendedInstruction, addressSrcSelect, reset, clk);
+ExtendedPC pc(currentAddress, extendedInstruction, addressBranchSelect, addressJumpSelect, instruction, reset, clk);
 
-and branchAnd(addressSrcSelect, aluZeroFlag, branch);
+and branchAnd(addressBranchSelect, aluZeroFlag, branch);
 
 InstructionMemory instructionMemory(instruction, currentAddress);
 
@@ -61,7 +60,7 @@ RegisterFile registerFile(regData1, regData2, instruction[25:21], instruction[20
                             writeRegAddress, regWriteData, regWriteEnable, clk);
 
 ControlUnit controlUnit(writeRegDist, branch, memToReg, memWriteEnable, aluSrcSelector,
-			regWriteEnable, aluOp, instruction[31:26], instruction[5:0]);
+			regWriteEnable, addressJumpSelect, aluOp, instruction[31:26], instruction[5:0]);
 
 
 SignExtend signExtend(extendedInstruction, instruction[15:0]);
@@ -89,6 +88,9 @@ initial
 begin
     // $monitor($time,,, "aluOut:%d, regData1:%d, regData2:%d, instruction:%b\nregWriteData : %d",
     //         aluOut, regData1, regData2, instruction, regWriteData);
+
+    $monitor($time,,, "pc : %d", PC);
+
     reset = 1'b1;
 
     #10

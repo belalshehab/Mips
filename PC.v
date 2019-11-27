@@ -17,22 +17,27 @@ endmodule // PC
 module ExtendedPC(
     output [31:0] currentAddress,
     input [31:0] jumbSteps,
-    input select,
+    input selectBranch, selectJump,
+    input [31:0] instruction,
     input reset, clk
 );
 
-wire [31:0] nextAddress;
-wire [31:0] addressPlus4, jumbOffset, jumbAddress;
+wire [31:0] nextAddress, branchMuxOut;
+wire [31:0] addressPlus4, branchOffset, branchAddress, jumpAddress;
 
 FullAdder add4(addressPlus4, currentAddress, 4);
 
-ShiftLeftRegister shiftLeft(jumbOffset, jumbSteps, 5'b00010);
-FullAdder addJumb(jumbAddress, addressPlus4, jumbOffset);
+ShiftLeftRegister shiftLeftBranch(branchOffset, jumbSteps, 5'b00010);
+FullAdder addJumb(branchAddress, addressPlus4, branchOffset);
 
-MuxTwoToOne32 mux(nextAddress, addressPlus4, jumbAddress, select);
+MuxTwoToOne32 branchMux(branchMuxOut, addressPlus4, branchAddress, selectBranch);
+
+assign jumpAddress = {addressPlus4[31:28], instruction[25:0] << 2};
+MuxTwoToOne32 jumpMux(nextAddress, branchMuxOut, jumpAddress, selectJump);
+
 PC pc(currentAddress, nextAddress, reset, clk);
 
-// assign nextAddress = (select == 1'b0) ? currentAddress +4 : (jumbAddress << 2) + currentAddress +4;
+// assign nextAddress = (selectBranch == 1'b0) ? currentAddress +4 : (branchAddress << 2) + currentAddress +4;
 
 endmodule // ExtendedPC
 
@@ -42,33 +47,33 @@ module PCTest;
     wire clk;
     wire [31:0] currentAddress;
 
-    reg [31:0] jumbAddress;
-    reg reset, select;
+    reg [31:0] branchAddress;
+    reg reset, selectBranch;
 
 
     Clock clock(clk);
-    ExtendedPC pc(currentAddress, jumbAddress, select, reset, clk);
+    ExtendedPC pc(currentAddress, branchAddress, selectBranch, reset, clk);
 
     initial
     begin
-    $monitor($time,,, "current: %d, jumb: %d, select: %b, reset:%b", currentAddress, jumbAddress, select, reset);
+    $monitor($time,,, "current: %d, jumb: %d, selectBranch: %b, reset:%b", currentAddress, branchAddress, selectBranch, reset);
         
-        jumbAddress = 100;
+        branchAddress = 100;
         
-        select = 0;
+        selectBranch = 0;
         reset = 1;
         #2
         reset = 0;
         #20
-        select = 1;
+        selectBranch = 1;
         #2
-        select = 0;
+        selectBranch = 0;
         #10
 
-        jumbAddress = 10;
-        select = 1;
+        branchAddress = 10;
+        selectBranch = 1;
         #2
-        select = 0;
+        selectBranch = 0;
         #20
 
         reset = 1;

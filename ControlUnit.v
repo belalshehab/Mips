@@ -5,6 +5,7 @@ module ControlUnit(
 	memWrite,
 	aluSrc,
 	regWrite,
+	jump,
 	output reg [2:0] aluOp,
 	
 	input [5:0] opcode, funct
@@ -20,6 +21,7 @@ begin
 	memWrite = 1'b0;
 	aluSrc = 1'b0;
 	regWrite = 1'b0;
+	jump = 1'b0;
 	aluOp = 3'b000;
 
 	// R type
@@ -76,8 +78,10 @@ begin
 	end
 
 	// J type
-	// Do nothing!..
-	// All signals already 0.
+	else if(opcode == 2)
+	begin
+		jump = 1'b1;
+	end
 	end
 		
 endmodule
