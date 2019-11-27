@@ -24,13 +24,15 @@ wire regWriteEnable;
 
 
 //ControlUnit 
-wire writeRegDist, branch, memToReg, memWriteEnable, aluSrcSelector, regWrite;
+wire branch, memWriteEnable, aluSrcSelector, regWrite;
+wire [1:0] writeRegDist, memToReg;
 wire [2:0] aluOp;
 
 //ExtendedAlu
 wire [31:0] aluOut;
 wire aluZeroFlag;
 wire [31:0] aluInput2;
+wire [31:0] addressPlus4;
 
 //SignExtend
 wire [31:0] extendedInstruction; //aka branch steps
@@ -48,13 +50,13 @@ assign mipsRegWriteData = regWriteData;
 //End of debugging signals
 
 
-ExtendedPC pc(currentAddress, extendedInstruction, addressBranchSelect, addressJumpSelect, addressJumpRSelect, instruction, regData1, reset, clk);
+ExtendedPC pc(currentAddress, addressPlus4, extendedInstruction, addressBranchSelect, addressJumpSelect, addressJumpRSelect, instruction, regData1, reset, clk);
 
 and branchAnd(addressBranchSelect, aluZeroFlag, branch);
 
 InstructionMemory instructionMemory(instruction, currentAddress);
 
-MuxTwoToOne5 writeRegMux(writeRegAddress, instruction[20:16], instruction[15:11], writeRegDist);
+MuxThreeToOne5 writeRegMux(writeRegAddress, instruction[20:16], instruction[15:11], 5'b11111, writeRegDist);
 
 RegisterFile registerFile(regData1, regData2, instruction[25:21], instruction[20:16],
                             writeRegAddress, regWriteData, regWriteEnable, clk);
@@ -70,7 +72,7 @@ ExtendedAlu extendedAlu(aluOut, aluZeroFlag, regData1, aluInput2, instruction[5:
 
 DataMemory dataMemory(dataMemoryRead, aluOut, regData2, memWriteEnable, clk);
 
-MuxTwoToOne32 memToRegMux(regWriteData, aluOut, dataMemoryRead, memToReg);
+MuxThreeToOne32 memToRegMux(regWriteData, aluOut, dataMemoryRead, addressPlus4, memToReg);
 endmodule // Mips
 
 

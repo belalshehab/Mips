@@ -16,6 +16,7 @@ endmodule // PC
 
 module ExtendedPC(
     output [31:0] currentAddress,
+    output [31:0] addressPlus4,
     input [31:0] jumpSteps,
     input selectBranch, selectJump, selectJumpR,
     input [31:0] instruction,
@@ -24,7 +25,7 @@ module ExtendedPC(
 );
 
 wire [31:0] nextAddress, branchMuxOut, jumpMuxOut;
-wire [31:0] addressPlus4, branchOffset, branchAddress, jumpAddress;
+wire [31:0] branchOffset, branchAddress, jumpAddress;
 
 FullAdder add4(addressPlus4, currentAddress, 4);
 

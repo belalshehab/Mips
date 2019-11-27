@@ -1,8 +1,8 @@
 module ControlUnit(
-	output reg regDst, 
-	branch,
-	memToReg,
-	memWrite,
+	output reg [1:0] regDst, 
+	output reg branch,
+	output reg [1:0] memToReg,
+	output reg memWrite,
 	aluSrc,
 	regWrite,
 	jump,
@@ -16,9 +16,9 @@ begin
 	
     //first, reset all signals
  
-	regDst = 1'b0;
+	regDst = 2'b00;
 	branch = 1'b0;
-	memToReg = 1'b0;
+	memToReg = 2'b00;
 	memWrite = 1'b0;
 	aluSrc = 1'b0;
 	regWrite = 1'b0;
@@ -29,7 +29,7 @@ begin
 	// R type
 	if(opcode == 0)
 	begin
-		regDst = 1'b1;
+		regDst = 1'b01;
 		// regWrite = 1'b1;
 		aluOp = 3'b010;
 
@@ -64,7 +64,7 @@ begin
 	else if(opcode == 35)
 	begin
 		aluSrc = 1'b1;
-		memToReg = 1'b1;
+		memToReg = 2'b01;
 		regWrite = 1'b1;
 	end
 
@@ -88,6 +88,16 @@ begin
 	begin
 		jump = 1'b1;
 	end
+
+	// Jal type
+	else if(opcode == 3)
+	begin
+		regDst = 2'b10;
+		jump = 1'b1;
+		regWrite = 1'b1;
+		memToReg = 2'b10;
+	end
+
 	end
 		
 endmodule

@@ -7,672 +7,726 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/modeltech64_10.6d/examples
+Z0 dC:/modeltech64_10.6d/examples
 T_opt
-!s110 1574863201
-VajAkPNbMRnRcc^HY:[8nO1
-04 8 4 work MipsTest fast 0
-=1-e86a64ff6aae-5dde8161-206-3300
-o-quiet -auto_acc_if_foreign -work work
-Z0 tCvgOpt 0
+!s110 1574866736
+V>bWmoSOz8AgFST;EMRAUa0
+Z1 04 8 4 work MipsTest fast 0
+=6-e86a64ff6aae-5dde8f30-f8-4034
+Z2 o-quiet -auto_acc_if_foreign -work work
+Z3 tCvgOpt 0
 n@_opt
-OL;O;10.6d;65
+Z4 OL;O;10.6d;65
+R0
+T_opt1
+!s110 1574866780
+VoP@LdP^6jSfbPfz23=W>=1
+R1
+=1-e86a64ff6aae-5dde8f5c-14c-271c
+R2
+R3
+n@_opt1
+R4
 vAlu
-Z1 !s110 1574863162
+Z5 !s110 1574866293
 !i10b 1
 !s100 >XmUch^U4VzBn@la1ON;22
 I7Kl;0BPQ53hhzz8Um63Gm1
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 dD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips
-Z4 w1574863013
-Z5 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ALU.v
-Z6 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ALU.v
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 dD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips
+Z8 w1574863013
+Z9 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ALU.v
+Z10 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ALU.v
 L0 1
-Z7 OL;L;10.6d;65
+Z11 OL;L;10.6d;65
 r1
 !s85 0
 31
-Z8 !s108 1574863162.000000
-Z9 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ALU.v|
-Z10 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ALU.v|
+Z12 !s108 1574866293.000000
+Z13 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ALU.v|
+Z14 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ALU.v|
 !i113 0
-Z11 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R0
+Z15 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
 n@alu
 vAluControl
-R1
+R5
 !i10b 1
 !s100 IF1WGA[cLbP2Ab^_j6ZJD2
 Ica^;VOJ[Qh3AIK2FU[PhL2
-R2
-R3
-R4
-Z12 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/AluControl.v
-Z13 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/AluControl.v
-L0 1
+R6
 R7
+R8
+Z16 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/AluControl.v
+Z17 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/AluControl.v
+L0 1
+R11
 r1
 !s85 0
 31
-R8
-Z14 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/AluControl.v|
-Z15 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/AluControl.v|
+R12
+Z18 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/AluControl.v|
+Z19 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/AluControl.v|
 !i113 0
-R11
-R0
+R15
+R3
 n@alu@control
 vALUTest
-R1
+R5
 !i10b 1
 !s100 4U2kR;fh>75nh0MzTj]_H0
 I3O`0U=9M8>Nj[?QnR0Udj2
-R2
-R3
-R4
-R5
 R6
-L0 45
 R7
-r1
-!s85 0
-31
 R8
 R9
 R10
-!i113 0
+L0 45
 R11
-R0
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R3
 n@a@l@u@test
 vClock
-R1
+Z20 !s110 1574866294
 !i10b 1
 !s100 0fk_9d=VHT_2>[=@ICPXI2
 IXQYM:XLDJYSOeB1Ico>ez1
-R2
-R3
-R4
+R6
+R7
+R8
 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Clock.v
 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Clock.v
 L0 1
-R7
+R11
 r1
 !s85 0
 31
-R8
+Z21 !s108 1574866294.000000
 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Clock.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Clock.v|
 !i113 0
-R11
-R0
+R15
+R3
 n@clock
 vControlUnit
-R1
+R20
 !i10b 1
-!s100 <BR>3<]@=eTXCfa]R<3PS1
-IkNjafo>jh9T6]:8KCzobm1
-R2
-R3
-R4
-Z16 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ControlUnit.v
-Z17 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ControlUnit.v
-L0 1
+!s100 :fo:nNW3?=Ek@R0oDmY3[3
+I>Vm=XZ9JX6E9]ok1XWd970
+R6
 R7
+Z22 w1574866090
+Z23 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ControlUnit.v
+Z24 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ControlUnit.v
+L0 1
+R11
 r1
 !s85 0
 31
-R8
-Z18 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ControlUnit.v|
-Z19 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ControlUnit.v|
+R21
+Z25 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ControlUnit.v|
+Z26 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ControlUnit.v|
 !i113 0
-R11
-R0
+R15
+R3
 n@control@unit
 vControlUnit_tb
-R1
+R20
 !i10b 1
-!s100 L^ahzBMl3E]3YJB8PKN^]1
-IZUI=QZOD6L`59`KNCTA7S0
-R2
-R3
-R4
-R16
-R17
-L0 98
+!s100 dUY2_gFX87SY[jG;VHmY03
+I9>W9YzZ8i?mlEKSG`?bBE3
+R6
 R7
+R22
+R23
+R24
+L0 108
+R11
 r1
 !s85 0
 31
-R8
-R18
-R19
+R21
+R25
+R26
 !i113 0
-R11
-R0
+R15
+R3
 n@control@unit_tb
 vDataMemory
-R1
+R20
 !i10b 1
 !s100 hTo`09gbkan3?F5T`n1g<3
 IQZ4m_WzhLV_<g7CEG^I0>3
-R2
-R3
-R4
-Z20 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Memory.v
-Z21 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Memory.v
-L0 1
+R6
 R7
+R8
+Z27 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Memory.v
+Z28 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Memory.v
+L0 1
+R11
 r1
 !s85 0
 31
-R8
-Z22 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Memory.v|
-Z23 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Memory.v|
+R21
+Z29 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Memory.v|
+Z30 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Memory.v|
 !i113 0
-R11
-R0
+R15
+R3
 n@data@memory
 vDataMemoryTest
-R1
+R20
 !i10b 1
 !s100 g??RTDogEcPbU@?NTGCFb2
 IT:<=TZ^10hJ_?VO;MK1nm0
-R2
-R3
-R4
-R20
-R21
-L0 78
+R6
 R7
+R8
+R27
+R28
+L0 78
+R11
 r1
 !s85 0
 31
-R8
-R22
-R23
+R21
+R29
+R30
 !i113 0
-R11
-R0
+R15
+R3
 n@data@memory@test
 vExtendedAlu
-R1
+R5
 !i10b 1
 !s100 <YXF]I<1lkRVc4UHQD[N`1
 I^GY]84n2WT6Uc_72TB84S2
-R2
-R3
-R4
-R5
 R6
-L0 29
 R7
-r1
-!s85 0
-31
 R8
 R9
 R10
-!i113 0
+L0 29
 R11
-R0
-n@extended@alu
-vExtendedPC
-Z24 !s110 1574863163
-!i10b 1
-!s100 [M96_D1S<fWR=81;d@k5?1
-I=8GFF>bHaBHZbUga093Y81
-R2
-R3
-R4
-Z25 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/PC.v
-Z26 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/PC.v
-L0 17
-R7
 r1
 !s85 0
 31
-Z27 !s108 1574863163.000000
-Z28 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/PC.v|
-Z29 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/PC.v|
+R12
+R13
+R14
 !i113 0
+R15
+R3
+n@extended@alu
+vExtendedPC
+R20
+!i10b 1
+!s100 kc@6?c7g>`KbZdb1=44fB1
+I_N?AW5oZMngA@B[c1Io;71
+R6
+R7
+Z31 w1574864249
+Z32 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/PC.v
+Z33 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/PC.v
+L0 17
 R11
-R0
+r1
+!s85 0
+31
+R21
+Z34 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/PC.v|
+Z35 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/PC.v|
+!i113 0
+R15
+R3
 n@extended@p@c
 vFullAdder
-R1
+R20
 !i10b 1
 !s100 HV3kER>DYfgH36H8bZ3Q=2
 IlUh]K_UkXdaV5L]98=ZbM3
-R2
-R3
-R4
-Z30 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/FullAdder.v
-Z31 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/FullAdder.v
-L0 1
+R6
 R7
+R8
+Z36 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/FullAdder.v
+Z37 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/FullAdder.v
+L0 1
+R11
 r1
 !s85 0
 31
-R8
-Z32 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/FullAdder.v|
-Z33 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/FullAdder.v|
+R21
+Z38 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/FullAdder.v|
+Z39 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/FullAdder.v|
 !i113 0
-R11
-R0
+R15
+R3
 n@full@adder
 vFullAdderTest
-R1
+R20
 !i10b 1
 !s100 ehk=BBUBGDIWlW:Qa?IQZ1
 Iklz>2D^MN<B81mNZc<0If3
-R2
-R3
-R4
-R30
-R31
-Z34 L0 10
+R6
 R7
+R8
+R36
+R37
+Z40 L0 10
+R11
 r1
 !s85 0
 31
-R8
-R32
-R33
+R21
+R38
+R39
 !i113 0
-R11
-R0
+R15
+R3
 n@full@adder@test
 vInstructionMemory
-R1
+R20
 !i10b 1
 !s100 J1hVKIe8;j4Fz9P`UUKf91
 IX?N@SbnjCiz_if;09jSeM2
-R2
-R3
-R4
-R20
-R21
-L0 36
+R6
 R7
+R8
+R27
+R28
+L0 36
+R11
 r1
 !s85 0
 31
-R8
-R22
-R23
+R21
+R29
+R30
 !i113 0
-R11
-R0
+R15
+R3
 n@instruction@memory
 vInstructionMemoryTest
-R1
+R20
 !i10b 1
 !s100 @AR?ZITY^Gm`@=A1NJ2>D2
 IJL6V;?W29k1U65nTW3EWh0
-R2
-R3
-R4
-R20
-R21
-L0 55
+R6
 R7
+R8
+R27
+R28
+L0 55
+R11
 r1
 !s85 0
 31
-R8
-R22
-R23
+R21
+R29
+R30
 !i113 0
-R11
-R0
+R15
+R3
 n@instruction@memory@test
 vMips
-R1
+Z41 !s110 1574866733
 !i10b 1
-!s100 Z@Ih0C=c8EE=liC5LJc3d1
-I76_GP;TPcReiP6Z>=FO532
-R2
-R3
-R4
-Z35 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Mips.v
-Z36 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Mips.v
-L0 2
+!s100 Jf]Re<YHBKEkKDeV_j9Go3
+I^YFi<mX5mX<cR3NnRDmXh3
+R6
 R7
+Z42 w1574866731
+Z43 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Mips.v
+Z44 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Mips.v
+L0 2
+R11
 r1
 !s85 0
 31
-R8
-Z37 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Mips.v|
-Z38 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Mips.v|
+Z45 !s108 1574866733.000000
+Z46 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Mips.v|
+Z47 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Mips.v|
 !i113 0
-R11
-R0
+R15
+R3
 n@mips
 vMipsTest
-R1
-!i10b 1
-!s100 >4R:]5g3Y5fN]=<_adf`X2
-IhdN6:d:oDVg^c7WP0U=TQ1
-R2
-R3
-R4
-R35
-R36
-L0 77
-R7
-r1
-!s85 0
-31
-R8
-R37
-R38
-!i113 0
-R11
-R0
-n@mips@test
-vMuxTwoToOne32
-R1
-!i10b 1
-!s100 QOAhGBFd;G7DjZZFMX2fo3
-IDG3e;9cfieb5VVckVkPV>0
-R2
-R3
-R4
-Z39 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Mux.v
-Z40 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Mux.v
-L0 2
-R7
-r1
-!s85 0
-31
-R8
-Z41 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Mux.v|
-Z42 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Mux.v|
-!i113 0
-R11
-R0
-n@mux@two@to@one32
-vMuxTwoToOne5
-R1
-!i10b 1
-!s100 dcC70Bgzl?AQn>lhg^]_]3
-I0NW=SE_Q4]j]mMT]A`MBY0
-R2
-R3
-R4
-R39
-R40
-L0 14
-R7
-r1
-!s85 0
-31
-R8
 R41
+!i10b 1
+!s100 4go0o2O6GD=Un6S8721h@3
+Ic=3QPb@`ORTmPF7nKWMOA1
+R6
+R7
 R42
-!i113 0
-R11
-R0
-n@mux@two@to@one5
-vMuxTwoToOneTest
-R1
-!i10b 1
-!s100 F3lJZNHkT[9W84H:oSMYK0
-IY8D_nKP898zoO4Am15bRX2
-R2
-R3
-R4
-R39
-R40
-L0 25
-R7
-r1
-!s85 0
-31
-R8
-R41
-R42
-!i113 0
-R11
-R0
-n@mux@two@to@one@test
-vPC
-R24
-!i10b 1
-!s100 Q]ckz0iRK4O0SnDznkfOX1
-ISFBUWJ<_7egd7mRFm34AQ3
-R2
-R3
-R4
-R25
-R26
-L0 1
-R7
-r1
-!s85 0
-31
-R27
-R28
-R29
-!i113 0
-R11
-R0
-n@p@c
-vPCTest
-R24
-!i10b 1
-!s100 8?@Vf1Zd@ZZh=P@@h14DB3
-I[5Dl@c3<G?@bameW_fcNd0
-R2
-R3
-R4
-R25
-R26
-L0 48
-R7
-r1
-!s85 0
-31
-R27
-R28
-R29
-!i113 0
-R11
-R0
-n@p@c@test
-vRegFileTest
-R24
-!i10b 1
-!s100 W_6ez7TS`g3z_E`?VYe2c2
-IbAC=Oelo17GXMP@XD6e>J2
-R2
-R3
-R4
-Z43 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/RegisterFile.v
-Z44 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/RegisterFile.v
-L0 34
-R7
-r1
-!s85 0
-31
-R27
-Z45 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/RegisterFile.v|
-Z46 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/RegisterFile.v|
-!i113 0
-R11
-R0
-n@reg@file@test
-vRegisterFile
-R24
-!i10b 1
-!s100 ^O[^OBeTW9g2oS5WP3jTE2
-IO<>RQnkKBgo[b_>bX_JUb0
-R2
-R3
-R4
 R43
 R44
-L0 1
-R7
+L0 79
+R11
 r1
 !s85 0
 31
-R27
 R45
 R46
-!i113 0
-R11
-R0
-n@register@file
-vShiftLeftRegister
-R24
-!i10b 1
-!s100 o0:Eg?U2Jl5EEUoGC7_X=3
-IPfSdE_0DkkBn_RA:UFIVV0
-R2
-R3
-R4
-Z47 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ShiftRegister.v
-Z48 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ShiftRegister.v
-L0 1
-R7
-r1
-!s85 0
-31
-R27
-Z49 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ShiftRegister.v|
-Z50 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ShiftRegister.v|
-!i113 0
-R11
-R0
-n@shift@left@register
-vshiftRegTest
-R24
-!i10b 1
-!s100 8eAQX>LSjGJEcodoZJi_l2
-Ib7MIDM]ADTlm>e6RoS:OK0
-R2
-R3
-R4
 R47
-R48
-R34
+!i113 0
+R15
+R3
+n@mips@test
+vMuxThreeToOne32
+Z48 !s110 1574866611
+!i10b 1
+!s100 U;ccY?55;Z@fke103011J3
+IQ[fN>BOMn=6Ci7gN^S4g41
+R6
 R7
+Z49 w1574866607
+Z50 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Mux.v
+Z51 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Mux.v
+L0 26
+R11
 r1
 !s85 0
 31
-R27
+Z52 !s108 1574866611.000000
+Z53 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Mux.v|
+Z54 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Mux.v|
+!i113 0
+R15
+R3
+n@mux@three@to@one32
+vMuxThreeToOne5
+R48
+!i10b 1
+!s100 VJ<2QO=6D4>GbSS?5[YBa2
+IT>WajffC^?L6ROg_Yn?f]0
+R6
+R7
 R49
 R50
-!i113 0
-R11
-R0
-nshift@reg@test
-vSignExtend
-R24
-!i10b 1
-!s100 Y?LEn?1e5k>0?hJXe3YIA2
-IK_8@PCS2JJKKm_R^oVEPA2
-R2
-R3
-R4
-Z51 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/SignExtend.v
-Z52 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/SignExtend.v
-L0 1
-R7
-r1
-!s85 0
-31
-R27
-Z53 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/SignExtend.v|
-Z54 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/SignExtend.v|
-!i113 0
-R11
-R0
-n@sign@extend
-vSignExtendTest
-R24
-!i10b 1
-!s100 4h>J3;f@FkdQZ@1ETnTD[0
-I?=dYZ[MzJSHUImGeI4XKm3
-R2
-R3
-R4
 R51
-R52
-R34
-R7
+L0 44
+R11
 r1
 !s85 0
 31
-R27
+R52
 R53
 R54
 !i113 0
-R11
-R0
-n@sign@extend@test
-vtb_alu
-R1
-!i10b 1
-!s100 4Qm8JYc>`ohI_VK6U]9X>1
-I=Q`ZkSNb0aAP=^`ebI]0n2
-R2
-R3
-R4
-R12
-R13
-L0 35
-R7
-r1
-!s85 0
-31
-R8
-R14
 R15
-!i113 0
-R11
-R0
-vTest
-R1
-!i10b 1
-!s100 X5DfW5CUllb[E29Dj;]C30
-IhZ?2aZUKh]2^FL4VSnegi2
-R2
 R3
-R4
-Z55 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Experimenting.v
-Z56 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Experimenting.v
-L0 1
+n@mux@three@to@one5
+vMuxTwoToOne32
+R48
+!i10b 1
+!s100 QOAhGBFd;G7DjZZFMX2fo3
+IDG3e;9cfieb5VVckVkPV>0
+R6
 R7
+R49
+R50
+R51
+L0 2
+R11
 r1
 !s85 0
 31
-R8
-Z57 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Experimenting.v|
-Z58 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Experimenting.v|
+R52
+R53
+R54
 !i113 0
-R11
-R0
-n@test
-vTestTest
-R1
-!i10b 1
-!s100 DSSaf@7WSKEB[2SkHFY^k2
-In622zYAGWn@^g=DAUZN?43
-R2
+R15
 R3
-R4
+n@mux@two@to@one32
+vMuxTwoToOne5
+R48
+!i10b 1
+!s100 dcC70Bgzl?AQn>lhg^]_]3
+I0NW=SE_Q4]j]mMT]A`MBY0
+R6
+R7
+R49
+R50
+R51
+L0 14
+R11
+r1
+!s85 0
+31
+R52
+R53
+R54
+!i113 0
+R15
+R3
+n@mux@two@to@one5
+vMuxTwoToOneTest
+R48
+!i10b 1
+!s100 bFL^2@e2DJz>9j1eS^Weo3
+IPR^?@[WAKD_BcfkO`lmFf2
+R6
+R7
+R49
+R50
+R51
+L0 63
+R11
+r1
+!s85 0
+31
+R52
+R53
+R54
+!i113 0
+R15
+R3
+n@mux@two@to@one@test
+vPC
+R20
+!i10b 1
+!s100 Q]ckz0iRK4O0SnDznkfOX1
+ISFBUWJ<_7egd7mRFm34AQ3
+R6
+R7
+R31
+R32
+R33
+L0 1
+R11
+r1
+!s85 0
+31
+R21
+R34
+R35
+!i113 0
+R15
+R3
+n@p@c
+vPCTest
+R20
+!i10b 1
+!s100 `e>[P>:_zXNWL:[^YnVjW1
+Iej;2le]NkZPHV;:Wlm0Dc3
+R6
+R7
+R31
+R32
+R33
+L0 49
+R11
+r1
+!s85 0
+31
+R21
+R34
+R35
+!i113 0
+R15
+R3
+n@p@c@test
+vRegFileTest
+R20
+!i10b 1
+!s100 W_6ez7TS`g3z_E`?VYe2c2
+IbAC=Oelo17GXMP@XD6e>J2
+R6
+R7
+R8
+Z55 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/RegisterFile.v
+Z56 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/RegisterFile.v
+L0 34
+R11
+r1
+!s85 0
+31
+R21
+Z57 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/RegisterFile.v|
+Z58 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/RegisterFile.v|
+!i113 0
+R15
+R3
+n@reg@file@test
+vRegisterFile
+R20
+!i10b 1
+!s100 ^O[^OBeTW9g2oS5WP3jTE2
+IO<>RQnkKBgo[b_>bX_JUb0
+R6
+R7
+R8
 R55
 R56
-R34
-R7
+L0 1
+R11
 r1
 !s85 0
 31
-R8
+R21
 R57
 R58
 !i113 0
+R15
+R3
+n@register@file
+vShiftLeftRegister
+R20
+!i10b 1
+!s100 o0:Eg?U2Jl5EEUoGC7_X=3
+IPfSdE_0DkkBn_RA:UFIVV0
+R6
+R7
+R8
+Z59 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ShiftRegister.v
+Z60 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ShiftRegister.v
+L0 1
 R11
-R0
+r1
+!s85 0
+31
+R21
+Z61 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ShiftRegister.v|
+Z62 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/ShiftRegister.v|
+!i113 0
+R15
+R3
+n@shift@left@register
+vshiftRegTest
+R20
+!i10b 1
+!s100 8eAQX>LSjGJEcodoZJi_l2
+Ib7MIDM]ADTlm>e6RoS:OK0
+R6
+R7
+R8
+R59
+R60
+R40
+R11
+r1
+!s85 0
+31
+R21
+R61
+R62
+!i113 0
+R15
+R3
+nshift@reg@test
+vSignExtend
+R20
+!i10b 1
+!s100 Y?LEn?1e5k>0?hJXe3YIA2
+IK_8@PCS2JJKKm_R^oVEPA2
+R6
+R7
+R8
+Z63 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/SignExtend.v
+Z64 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/SignExtend.v
+L0 1
+R11
+r1
+!s85 0
+31
+R21
+Z65 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/SignExtend.v|
+Z66 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/SignExtend.v|
+!i113 0
+R15
+R3
+n@sign@extend
+vSignExtendTest
+R20
+!i10b 1
+!s100 4h>J3;f@FkdQZ@1ETnTD[0
+I?=dYZ[MzJSHUImGeI4XKm3
+R6
+R7
+R8
+R63
+R64
+R40
+R11
+r1
+!s85 0
+31
+R21
+R65
+R66
+!i113 0
+R15
+R3
+n@sign@extend@test
+vtb_alu
+R5
+!i10b 1
+!s100 4Qm8JYc>`ohI_VK6U]9X>1
+I=Q`ZkSNb0aAP=^`ebI]0n2
+R6
+R7
+R8
+R16
+R17
+L0 35
+R11
+r1
+!s85 0
+31
+R12
+R18
+R19
+!i113 0
+R15
+R3
+vTest
+R20
+!i10b 1
+!s100 X5DfW5CUllb[E29Dj;]C30
+IhZ?2aZUKh]2^FL4VSnegi2
+R6
+R7
+R8
+Z67 8D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Experimenting.v
+Z68 FD:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Experimenting.v
+L0 1
+R11
+r1
+!s85 0
+31
+R21
+Z69 !s107 D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Experimenting.v|
+Z70 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Education/University/3rdCSE/CO/Projects/MIPS/Mips/Experimenting.v|
+!i113 0
+R15
+R3
+n@test
+vTestTest
+R20
+!i10b 1
+!s100 DSSaf@7WSKEB[2SkHFY^k2
+In622zYAGWn@^g=DAUZN?43
+R6
+R7
+R8
+R67
+R68
+R40
+R11
+r1
+!s85 0
+31
+R21
+R69
+R70
+!i113 0
+R15
+R3
 n@test@test
